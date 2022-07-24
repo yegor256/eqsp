@@ -1,0 +1,149 @@
+% (The MIT License)
+%
+% Copyright (c) 2022 Yegor Bugayenko
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the 'Software'), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+\documentclass[nobrand,anonymous,nodate,nosecurity]{huawei}
+\usepackage{href-ul}
+\begin{document}
+
+{\sffamily{\bfseries\Large Ensuring Quality in Software Projects}\\
+Series of lectures by \href{https://www.yegor256.com}{Yegor Bugayenko}\\
+% to students of \href{https://innopolis.university/en/}{Innopolis University} in 2021,\\
+% and \href{https://www.youtube.com/playlist?list=PLaIsQH4uc08woJKRAA7mmjs9fU0jeKjjM}{video recorded}}
+
+% The entire set of slide decks is in \href{https://github.com/yegor256/ssd16}{yegor256/ssd16} GitHub repository.
+
+\begin{abstract}
+The course is a series of loosely coupled pieces of advice related to quality of software development.
+Pragmatic programmers may listen to them if they don't want
+to tolerate chaos in their projects. The course is not only about
+coding practices, but also about static analysis, test coverage,
+bug tracking, dependency and artifact management, build automation,
+DevOps, and many other things. If we don't do them right, they may
+severely jeopardize the quality of the entire project.
+\end{abstract}
+
+% \section*{Introduction}
+
+\textbf{Who is the teacher?}
+I'm developing software for more than 30 years, being a hands-on programmer
+(see my GitHub account: \href{https://github.com/yegor256}{@yegor256})
+and a manager of other programmers. At the moment I'm a director
+of an R\&D laboratory in Huawei. Our primary research focus is
+software quality problems. You may find some lectures I've presented
+at some software conferences on
+\href{https://www.youtube.com/channel/UCr9qCdqXLm2SU0BIs6d_68Q}{my YouTube channel}.
+
+\textbf{Why this course?}
+In \href{https://www.youtube.com/watch?v=kPmbRkSWYnY}{one of my videos}
+a few years ago I explained what I believe is killing
+most software projects: it's the chaos they can't control. Most of us
+programmers start projects full of enthusiasm and best intentions.
+We are confident that this time the design will be solid, the code will
+be clean, and our customers will be happy because there will be no bugs.
+Eventually, sooner rather than later, the reality appears to be as bad
+as it was in the previous project: the code is messy, the design resembles
+spaghetti, and the bugs are unpredictable and hard to fix. We learn some
+lessons, abandon the project, and start a new one, again with the best
+intentions. But in a new project nothing changes.
+Most programmers that I know run in this cycle for decades.
+I believe, this course may help you not become one of them.
+
+\textbf{What's the methodology?}
+The course is a collection of individual cases not
+closely connected to each other. Each lecture discusses a single open-source
+GitHub repository. Each discussion highlights the mistakes made in the
+repository and suggests improvements. Each lecture ends with a conclusion
+and a formulated recomendation. The recomendations may help students
+prevent and control chaos in their own future projects.
+
+\newpage
+\section*{Course Aims}
+
+Prerequisites to the course (it is expected that a student knows this):
+
+\begin{itemize}
+\item How to use Git
+\item How to code
+\item How to design software
+\item How to write automated tests
+\item How to deploy
+\end{itemize}
+
+After the course a student \emph{hopefully} will know:
+
+\begin{itemize}
+\item How to prevent dependency hell
+\item How to use static analysis
+\item How to organize automated tests
+\item How to design integration tests
+\item How to maintain documentation
+\item How to convince a manager that quality is important
+\item How to organize bug tracking
+\item How to do code reviews
+\item How to configure pre-flight builds
+\item How to deal with negligence of other programmers
+\item How to practice DevOps being a programmer
+\item How to hire a programmer
+\item How to measure test coverage
+\item How to argue with customers
+\item How to discipline fellow programmers
+\item How to protect yourself from chaos
+\end{itemize}
+
+% \newpage
+% \section*{Learning Material}
+
+% The following books are highly recommended to read (in no particular order):
+
+% \begin{multicols}{2}\small\raggedright
+% Len Bass et al., \emph{Software Architecture in Practice}\\[3pt]
+% Paul Clements et al., \emph{Documenting Software Architectures: Views and Beyond}\\[3pt]
+% \nospell{Karl Wiegers} et al., \emph{Software Requirements}\\[3pt]
+% {\nospell{Alistair Cockburn}}, \emph{Writing Effective Use Cases}\\[3pt]
+% {\nospell{Steve McConnell}}, \emph{Software Estimation: Demystifying the Black Art}\\[3pt]
+% {Robert Martin}, \emph{Clean Architecture: A Craftsman's Guide to Software Structure and Design}\\[3pt]
+% {Steve McConnell}, \emph{Code Complete}\\[3pt]
+% {Frederick Brooks Jr.}, \emph{Mythical Man-Month, The: Essays on Software Engineering}\\[3pt]
+% {David Thomas et al.}, \emph{The Pragmatic Programmer: Your Journey To Mastery}\\[3pt]
+% {Robert C. Martin}, \emph{Clean Code: A Handbook of Agile Software Craftsmanship}\\[3pt]
+% {\nospell{Grady Booch} et al.}, \emph{Object-Oriented Analysis and Design with Applications}\\[3pt]
+% {\nospell{Bjarne Stroustrup}}, \emph{Programming: Principles and Practice Using C++}\\[3pt]
+% {\nospell{Brett McLaughlin} et al.}, \emph{Head First Object-Oriented Analysis and Design: A Brain Friendly Guide to OOA\&D}\\[3pt]
+% {David West}, \emph{Object Thinking}\\[3pt]
+% {Eric Evans}, \emph{Domain-Driven Design: Tackling Complexity in the Heart of Software}\\[3pt]
+% {Yegor Bugayenko}, \emph{Elegant Objects}\\[3pt]
+% {Michael Feathers}, \emph{Working Effectively with Legacy Code}\\[3pt]
+% {Martin Fowler}, \emph{Refactoring: Improving the Design of Existing Code}\\[3pt]
+% {Erich Gamma et al.}, \emph{Design Patterns: Elements of Reusable Object-Oriented Software}\\[3pt]
+% {Scott Meyers}, \emph{Effective C++: 55 Specific Ways to Improve Your Programs and Designs}\\[3pt]
+% {\nospell{Elliotte Rusty Harold} et al.}, \emph{XML in a Nutshell, Third Edition}\\[3pt]
+% {\nospell{Michael James Fitzgerald}}, \emph{Learning XSLT: A Hands-On Introduction to XSLT and XPath}\\[3pt]
+% {Martin Fowler}, \emph{UML Distilled}\\[3pt]
+% {\nospell{Anneke Kleppe} et al.}, \emph{MDA Explained: The Model Driven Architecture: Practice and Promise}\\[3pt]
+% {C.J. Date}, \emph{An Introduction to Database Systems, 8th Edition}\\[3pt]
+% {\nospell{Pramod Sadalage} et al.}, \emph{NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot Persistence}\\[3pt]
+% {\nospell{Jez Humble} et al.}, \emph{Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation}\\[3pt]
+% {\nospell{Michael T. Nygard}}, \emph{Release It!: Design and Deploy Production-Ready Software}\\[3pt]
+% {Leonard Richardson et al.}, \emph{RESTful Web APIs: Services for a Changing World}
+% \end{multicols}
+
+\end{document}
