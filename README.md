@@ -1,6 +1,3 @@
-<img src="https://www.iccq.ru/images/partners/iu.svg" height="48px"/>
-<img src="https://www.iccq.ru/images/partners/hse.svg" height="48px"/>
-
 [![latexmk](https://github.com/yegor256/eqsp/actions/workflows/latexmk.yml/badge.svg?branch=master)](https://github.com/yegor256/eqsp/actions/workflows/latexmk.yml)
 
 There are slides for my series of lectures for a few universities in Russia.
