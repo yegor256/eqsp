@@ -91,63 +91,127 @@ Prerequisites to the course (it is expected that a student knows this):
 \item How to deploy
 \end{itemize}
 
-After the course a student \emph{hopefully} will know:
+After the course a student \emph{hopefully} will understand:
 
 \begin{itemize}
-\item How to prevent dependency hell
-\item How to use static analysis
-\item How to organize automated tests
-\item How to design integration tests
-\item How to maintain documentation
 \item How to avoid code smells
 \item How to convince a manager that quality is important
-\item How to organize bug tracking
-\item How to do code reviews
-\item How to configure pre-flight builds
 \item How to deal with negligence of other programmers
-\item How to practice DevOps being a programmer
-\item How to hire a programmer
-\item How to measure test coverage
-\item How to argue with customers
+\item How to hire a programmer who cares
+\item How to argue with customers about quality
 \item How to discipline fellow programmers
 \item How to protect yourself from chaos
 \end{itemize}
 
-% \newpage
-% \section*{Learning Material}
+Also, a a student will be able to practice:
 
-% The following books are highly recommended to read (in no particular order):
+\begin{itemize}
+\item Source control:
+	\href{https://git-scm.com}{Git},
+	\href{https://subversion.apache.org}{Subversion}
+\item Build automation:
+	\href{https://en.wikipedia.org/wiki/Make_(software)}{Make},
+	\href{https://maven.apache.org}{Maven},
+	\href{https://gradle.org}{Gradle},
+	\href{https://gruntjs.com}{Grunt},
+	\href{https://github.com/ruby/rake}{Rake}
+\item Dependencies:
+	\href{https://maven.apache.org}{Maven Central},
+	\href{https://www.npmjs.com}{NpmJS},
+	\href{https://rubygems.org}{RubyGems},
+	\href{https://pypi.org/project/pip/}{PyPi}
+\item Static analysis:
+	\href{https://clang.llvm.org/extra/clang-tidy/}{Clang-Tidy},
+	\href{https://spotbugs.github.io}{SpotBugs},
+	\href{https://scan.coverity.com}{Coverity}
+\item Style checking:
+  \href{https://checkstyle.sourceforge.io}{Checkstyle},
+  \href{https://pmd.github.io}{PMD},
+  \href{https://rubocop.org}{Rubocop},
+  \href{https://eslint.org}{Eslint},
+  \href{https://www.qulice.com}{Qulice}
+\item Automated tests:
+	JUnit, Mocha
+\item Integration tests:
+  \href{https://cucumber.io}{Cucumber},
+  \href{https://www.selenium.dev}{Selenium},
+  \href{https://en.wikipedia.org/wiki/Cross-browser_testing}{Cross-Browser}
+\item Textual documentation: Markdown, Wiki, LaTeX,
+  \href{https://en.wikipedia.org/wiki/Controlled_natural_language}{CNL}
+\item Bug tracking:
+	GitHub,
+	JIRA,
+	Bugzilla
+\item Code reviews:
+	Github,
+	\href{https://www.gerritcodereview.com}{Gerrit},
+	\href{https://www.atlassian.com/software/crucible}{Crucible}
+\item Test coverage:
+	\href{https://www.eclemma.org/jacoco/}{Jacoco},
+	\href{https://cobertura.github.io/cobertura/}{Cobertura}
+\item Mutation coverage:
+	\href{https://www.pitest.org}{PIT}
+\item DevOps: Docker, Jenkins, AWS
+\item Pre-flight builds:
+	GitHub Actions,
+	\href{https://www.rultor.com}{Rultor}
+\end{itemize}
 
-% \begin{multicols}{2}\small\raggedright
-% Len Bass et al., \emph{Software Architecture in Practice}\\[3pt]
-% Paul Clements et al., \emph{Documenting Software Architectures: Views and Beyond}\\[3pt]
-% \nospell{Karl Wiegers} et al., \emph{Software Requirements}\\[3pt]
-% {\nospell{Alistair Cockburn}}, \emph{Writing Effective Use Cases}\\[3pt]
-% {\nospell{Steve McConnell}}, \emph{Software Estimation: Demystifying the Black Art}\\[3pt]
-% {Robert Martin}, \emph{Clean Architecture: A Craftsman's Guide to Software Structure and Design}\\[3pt]
-% {Steve McConnell}, \emph{Code Complete}\\[3pt]
-% {Frederick Brooks Jr.}, \emph{Mythical Man-Month, The: Essays on Software Engineering}\\[3pt]
-% {David Thomas et al.}, \emph{The Pragmatic Programmer: Your Journey To Mastery}\\[3pt]
-% {Robert C. Martin}, \emph{Clean Code: A Handbook of Agile Software Craftsmanship}\\[3pt]
-% {\nospell{Grady Booch} et al.}, \emph{Object-Oriented Analysis and Design with Applications}\\[3pt]
-% {\nospell{Bjarne Stroustrup}}, \emph{Programming: Principles and Practice Using C++}\\[3pt]
-% {\nospell{Brett McLaughlin} et al.}, \emph{Head First Object-Oriented Analysis and Design: A Brain Friendly Guide to OOA\&D}\\[3pt]
-% {David West}, \emph{Object Thinking}\\[3pt]
-% {Eric Evans}, \emph{Domain-Driven Design: Tackling Complexity in the Heart of Software}\\[3pt]
-% {Yegor Bugayenko}, \emph{Elegant Objects}\\[3pt]
-% {Michael Feathers}, \emph{Working Effectively with Legacy Code}\\[3pt]
-% {Martin Fowler}, \emph{Refactoring: Improving the Design of Existing Code}\\[3pt]
-% {Erich Gamma et al.}, \emph{Design Patterns: Elements of Reusable Object-Oriented Software}\\[3pt]
-% {Scott Meyers}, \emph{Effective C++: 55 Specific Ways to Improve Your Programs and Designs}\\[3pt]
-% {\nospell{Elliotte Rusty Harold} et al.}, \emph{XML in a Nutshell, Third Edition}\\[3pt]
-% {\nospell{Michael James Fitzgerald}}, \emph{Learning XSLT: A Hands-On Introduction to XSLT and XPath}\\[3pt]
-% {Martin Fowler}, \emph{UML Distilled}\\[3pt]
-% {\nospell{Anneke Kleppe} et al.}, \emph{MDA Explained: The Model Driven Architecture: Practice and Promise}\\[3pt]
-% {C.J. Date}, \emph{An Introduction to Database Systems, 8th Edition}\\[3pt]
-% {\nospell{Pramod Sadalage} et al.}, \emph{NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot Persistence}\\[3pt]
-% {\nospell{Jez Humble} et al.}, \emph{Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation}\\[3pt]
-% {\nospell{Michael T. Nygard}}, \emph{Release It!: Design and Deploy Production-Ready Software}\\[3pt]
-% {Leonard Richardson et al.}, \emph{RESTful Web APIs: Services for a Changing World}
-% \end{multicols}
+\newpage
+\section*{Grading}
+
+Students may form groups of up to four people. Each group will present
+their own public GitHub repository with a software module inside. The group
+will make a presentation of the quality control mechanisms that are
+present in the repository. They will have to explain during a 10-minutes
+oral presentation with live GitHub demonstration via screen sharing:
+
+\begin{itemize}
+	\item How enabled quality ensuring mechanisms work?
+	\item Why such mechanisms are in use?
+	\item How they help ensure quality?
+	\item How often they get activated?
+	\item What are the drawbacks of them?
+	\item What mechanism are not used and why?
+\end{itemize}
+
+Groups will compete with each other for the grades. Totally, there will
+be no more than 20\% of ``A'' marks, no more than 40\% of ``B,''
+and the rest will go do ``C'' and ``D.'' Students are highly advised to discuss
+their repositories and quality ensuring mechanisms with each other,
+before the final exam, in order to understand their relative positions
+and maybe trigger new ideas.
+
+Higher grades will be given for:
+
+\begin{itemize}
+	\item Better understanding of the reasons behind used mechanisms,
+	\item How they help ensure quality,
+	\item How often they get activated,
+	and
+	\item What are the drawbacks of them.
+\end{itemize}
+
+A retake exam is possible, following exactly the same procedure. However,
+the higher mark possible at the retake is ``C.''
+
+\newpage
+\section*{Learning Material}
+
+The following books are highly recommended to read (in no particular order):
+
+\begin{multicols}{2}\small\raggedright
+{\nospell{Steve McConnell}}, \emph{Software Estimation: Demystifying the Black Art}\\[3pt]
+{Robert Martin}, \emph{Clean Architecture: A Craftsman's Guide to Software Structure and Design}\\[3pt]
+{Steve McConnell}, \emph{Code Complete}\\[3pt]
+{Frederick Brooks Jr.}, \emph{Mythical Man-Month, The: Essays on Software Engineering}\\[3pt]
+{David Thomas et al.}, \emph{The Pragmatic Programmer: Your Journey To Mastery}\\[3pt]
+{Robert C. Martin}, \emph{Clean Code: A Handbook of Agile Software Craftsmanship}\\[3pt]
+{David West}, \emph{Object Thinking}\\[3pt]
+{Yegor Bugayenko}, \emph{Code Ahead}\\[3pt]
+{Michael Feathers}, \emph{Working Effectively with Legacy Code}\\[3pt]
+{\nospell{Jez Humble} et al.}, \emph{Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation}\\[3pt]
+{\nospell{Michael T. Nygard}}, \emph{Release It!: Design and Deploy Production-Ready Software}\\[3pt]
+\end{multicols}
 
 \end{document}
