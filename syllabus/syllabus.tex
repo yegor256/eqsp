@@ -22,6 +22,7 @@
 
 \documentclass[nobrand,anonymous,nodate,nosecurity]{huawei}
 \usepackage{href-ul}
+\usepackage{ffcode}
 \begin{document}
 
 {\sffamily{\bfseries\Large Ensuring Quality in Software Projects}\\
@@ -38,7 +39,8 @@ to tolerate chaos in their projects. The course is not only about
 coding practices, but also about static analysis, test coverage,
 bug tracking, dependency and artifact management, build automation,
 DevOps, and many other things. If we don't do them right, they may
-severely jeopardize the quality of the entire project.
+severely jeopardize the quality of the entire project, no matter
+how good are your algorithms.
 \end{abstract}
 
 % \section*{Introduction}
@@ -154,7 +156,7 @@ Also, a student will be able to practice:
 	\href{https://www.gerritcodereview.com}{Gerrit},
 	\href{https://www.atlassian.com/software/crucible}{Crucible}
 \item Test coverage:
-	\href{https://www.eclemma.org/jacoco/}{Jacoco},
+	\href{https://www.eclemma.org/jacoco/}{JaCoCo},
 	\href{codecov.io/}{Codecov}
 \item Mutation coverage:
 	\href{https://www.pitest.org}{PIT}
@@ -168,7 +170,53 @@ Also, a student will be able to practice:
 	\href{https://github.com/features/actions}{GitHub Actions},
 	\href{https://www.jenkins.io}{Jenkins},
 	\href{https://www.rultor.com}{Rultor}
+\item Metrics:
+	\href{https://www.sonarqube.org}{SonarQube},
+	\href{https://codeclimate.com/}{CodeClimate},
+	\href{https://www.jpeek.org}{jPeek}.
 \end{itemize}
+
+\newpage
+\section*{Lectures}
+
+\newcommand\github[1]{\href{https://github.com/#1}{#1}}
+
+This is a list of cases that will be discussed at the lectures:
+
+\begin{enumerate}
+	\item PMD rules in \github{yegor256/qulice}
+	\item Managing Maven dependencies in \github{yegor256/takes}
+	\item Multi-module \ff{pom.xml} in \github{objectionary/eo}
+	\item Deploying to Maven Central in \github{yegor256/cactoos}
+	\item Deploying Java app to Heroku in \github{zerocracy/farm}
+	\item Code reviews in \github{objectionary/eo}
+	\item Making a Ruby gem in \github{zold-io/zold}
+	\item Deploying a Ruby web app in \github{yegor256/sixnines}
+	\item Npm dependencies and Grunt in \github{objectionary/eoc}
+	\item Build automation with \ff{Makefile} in \github{yegor256/fibonacci}
+	\item Build automation with Gradle in \github{objectionary/eo-intellij-plugin}
+	\item Ruby style checking with Rubocop in \github{yegor256/sibit}
+	\item Integration testing against DynamoDB Local in \github{yegor256/rultor}
+	\item JaCoCo coverage control in \github{yegor256/cactoos}
+	\item Fake GitHub and AWS S3 objects in \github{jcabi/jcabi-github} and \github{jcabi/jcabi-s3}
+	\item Packaging for CTAN in \github{yegor256/ffcode}
+  \item Docker image releasing to the Hub in \github{yegor256/rultor-image}
+  \item Parametrized testing with YAML in \github{objectionary/eo}
+  \item GitHub actions in \github{yegor256/fibonacci} and \github{jcabi/jcabi-xml}
+  \item Integration testing with Maven Invoker Plugin in \github{jcabi/jcabi-xml}
+  \item CNL for requirements specification in \github{yegor256/requs}
+  \item Making and testing a new GitHub Action in \github{yegor256/latexmk-action}
+  \item XML style checking in \github{yegor256/xcop}
+  \item Headless in-browser testing with Selenium in \github{yegor256/jare}
+  \item Reversive deployment to AWS EC2 in \github{yegor256/s3auth}
+  \item Hits-of-code and other metrics in \github{yegor256/cobench} and \github{yegor256/hoc}
+  \item Testcontainers in \github{yegor256/threecopies}
+  \item BDD with Cucumber in \github{cqfn/pdd}
+  \item Calculating Java cohesion metrics in \github{cqfn/jpeek}
+  \item Documenting \ff{README.md} of a Java library in \github{yegor256/takes}
+\end{enumerate}
+
+Students are welcome to pick most interesting cases.
 
 \newpage
 \section*{Laboratory Classes}
