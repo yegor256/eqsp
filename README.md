@@ -4,6 +4,8 @@ There are slides for my series of lectures for a few universities in Russia.
 The series is titled "Ensuring Quality in Software Projects"
 All compiled slide decks in PDF are [here](https://yegor256.github.io/eqsp/).
 
+All lectures are video recorded, in this [YouTube playlist](https://www.youtube.com/playlist?list=PLaIsQH4uc08y14wCJMeffS2yErN4QpB8m).
+
 To compile everything just run:
 
 ```bash
