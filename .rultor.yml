@@ -3,6 +3,9 @@ docker:
 install: |-
   gem install texsc:0.6.0
   gem install texqc:0.6.0
+  sudo apt-get -y update
+  sudo apt-get -y install aspell
+  sudo apt-get -y install ghostscript
 merge:
   script: |-
     make
