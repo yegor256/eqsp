@@ -1,6 +1,8 @@
 # SPDX-FileCopyrightText: Copyright (c) 2022 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
+.PHONY: all clean test
+
 SHELL := /bin/bash
 
 .SHELLFLAGS = -e -o pipefail -c
@@ -22,14 +24,9 @@ lacheck:
 
 package: latexmk
 	mkdir -p package
-	for d in $(DIRS); do
-		cp $${d}/*.pdf package
-	done
-	cd package
-	rm -rf index.html
-	for f in $$(ls *.pdf); do
-		echo "<p><a href='$${f}'>$${f}</a></p>" >> index.html
-	done
+	for d in $(DIRS); do cp $${d}/*.pdf package; done
+	cd package && rm -rf index.html
+	for f in $$(ls *.pdf); do echo "<p><a href='$${f}'>$${f}</a></p>" >> index.html; done
 
 copy:
 	for d in $(DIRS); do
@@ -40,8 +37,5 @@ copy:
 
 clean:
 	for d in $(DIRS); do
-		cd $${d}
-		latexmk -C
-		rm -rf _minted*
-		cd ..
+		cd $${d} && latexmk -C && rm -rf _minted* && cd ..
 	done
